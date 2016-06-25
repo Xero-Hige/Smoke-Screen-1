@@ -18,8 +18,16 @@ package fi.uba.ar.fallas.inferencia;
 public class Mole {
 
     String molename;
+    String shape;
+    String border;
+    boolean diameter;
+    boolean itch;
+    boolean relieve; //FIXME
+    boolean solarExposure;
+    String color;
+    boolean changes;
 
-    Mole (String name){
+    Mole(String name) {
         molename = name;
     }
 
@@ -87,16 +95,7 @@ public class Mole {
         this.changes = changes;
     }
 
-    public void print(String message){
-        System.out.println(molename +" : "+message);
+    public void print(String message) {
+        System.out.println(molename + " : " + message);
     }
-
-    String shape;
-    String border;
-    boolean diameter;
-    boolean itch;
-    boolean relieve; //FIXME
-    boolean solarExposure;
-    String color;
-    boolean changes;
 }
