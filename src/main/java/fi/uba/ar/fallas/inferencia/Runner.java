@@ -33,7 +33,7 @@ public class Runner {
     }
 
     private Reader getRuleFileAsReader(String ruleFile) {
-        InputStream resourceAsStream = getClass().getResourceAsStream(ruleFile);
+        InputStream resourceAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(ruleFile);
         return new InputStreamReader(resourceAsStream);
     }
 
