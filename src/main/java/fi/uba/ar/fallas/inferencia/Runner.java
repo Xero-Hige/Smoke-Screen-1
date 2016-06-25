@@ -15,6 +15,12 @@ import java.io.Reader;
 
 public class Runner {
 
+    private Mole mole = null;
+
+    public void setMole(Mole mole) {
+        this.mole = mole;
+    }
+
     public RuleBase initialiseDrools() throws IOException, DroolsParserException {
         PackageBuilder packageBuilder = readRuleFiles();
         return addRulesToWorkingMemory(packageBuilder);
@@ -71,49 +77,6 @@ public class Runner {
     }
 
     private void createEngine(WorkingMemory workingMemory) {
-        Mole mole = new Mole("Lunar 1");
-        mole.setShape("Simetrica");
-        mole.setBorder("Regular");
-        mole.setDiameter(true);
-        mole.setItch(false);
-        mole.setRelieve(false);
-        mole.setSolarExposure(true);
-        mole.setChanges(false);
-        mole.setColor("Variado");
-        workingMemory.insert(mole);
-
-
-        mole = new Mole("Lunar 2");
-        mole.setShape("Asimetrica");
-        mole.setBorder("Irregular");
-        mole.setDiameter(true);
-        mole.setItch(false);
-        mole.setRelieve(false);
-        mole.setSolarExposure(true);
-        mole.setChanges(true);
-        mole.setColor("Variado");
-        workingMemory.insert(mole);
-
-        mole = new Mole("Lunar 3");
-        mole.setShape("Asimetrica");
-        mole.setBorder("Regular");
-        mole.setDiameter(false);
-        mole.setItch(false);
-        mole.setRelieve(true);
-        mole.setSolarExposure(true);
-        mole.setChanges(true);
-        mole.setColor("Variado");
-        workingMemory.insert(mole);
-
-        mole = new Mole("Lunar 4");
-        mole.setShape("Asimetrica");
-        mole.setBorder("Irregular");
-        mole.setDiameter(false);
-        mole.setItch(false);
-        mole.setRelieve(true);
-        mole.setSolarExposure(false);
-        mole.setChanges(true);
-        mole.setColor("Variado");
         workingMemory.insert(mole);
     }
 

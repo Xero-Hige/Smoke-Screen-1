@@ -1,5 +1,7 @@
 package fi.uba.ar.fallas.inferencia;
 
+import java.util.Locale;
+
 /**
  * Copyright 2016
  * Gaston Martinez gaston.martinez.90@gmail.com
@@ -26,9 +28,12 @@ public class Mole {
     boolean solarExposure;
     String color;
     boolean changes;
-
     Mole(String name) {
         molename = name;
+    }
+
+    public void setMolename(String molename) {
+        this.molename = molename;
     }
 
     public String getShape() {
@@ -95,7 +100,8 @@ public class Mole {
         this.changes = changes;
     }
 
-    public void print(String message) {
-        System.out.println(molename + " : " + message);
+    public void showDiagnoses(String diagnose) {
+        System.out.println(String.format(Locale.ENGLISH, "El lunar %s se diagnostica como un posible %s",
+                molename, diagnose));
     }
 }

@@ -6,7 +6,7 @@ rule "Nevo Comun"
         mole:Mole (shape == 'Simetrica' , border == "Regular" , diameter , ! itch)
 
     then
-        mole.print("Nevo Comun");
+        mole.showDiagnoses("Nevo Comun");
 end
 
 rule "Lentigo Solar"
@@ -14,7 +14,7 @@ rule "Lentigo Solar"
         mole:Mole (shape == 'Asimetrica' , border == "Irregular" , ! relieve, solarExposure , ! itch)
 
     then
-        mole.print("Lentigo Solar");
+        mole.showDiagnoses("Lentigo Solar");
 end
 
 rule "Queratosis seborreica"
@@ -22,7 +22,7 @@ rule "Queratosis seborreica"
         mole:Mole (shape == 'Asimetrica' , border == "Regular" , changes , relieve, solarExposure)
 
     then
-        mole.print("Queratosis seborreica");
+        mole.showDiagnoses("Queratosis seborreica");
 end
 
 rule "Melanoma maligno"
@@ -30,5 +30,5 @@ rule "Melanoma maligno"
         mole:Mole (shape == 'Asimetrica' , border == "Irregular" , color == "Variado" , ! diameter, changes)
 
     then
-        mole.print("Melanoma maligno");
+        mole.showDiagnoses("Melanoma maligno");
 end
