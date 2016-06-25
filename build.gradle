@@ -1,7 +1,3 @@
-plugins {
-    id 'de.aaschmid.cpd' version '0.4'
-}
-
 group 'fi.uba.ar.fallas'
 version '1.0'
 
@@ -9,10 +5,11 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
 
-mainClassName = 'fi.uba.ar.fallas.inferencia.Tp'
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+mainClassName = "fi.uba.ar.fallas.inferencia.Tp"
+
 
 repositories {
     maven {
@@ -26,16 +23,14 @@ repositories {
 }
 
 jar {
-    baseName = 'gs-gradle'
-    version =  '0.1.0'
+    version =  '0.5.0'
 }
 
-ext {
-    droolsVersion = '6.4.0.Final'
-}
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "org.kie:kie-api:$droolsVersion"
-    compile "org.drools:drools-core:$droolsVersion"
-    compile "org.drools:drools-compiler:$droolsVersion"
+    compile "org.kie:kie-api:6.4.0.Final"
+    compile "org.drools:drools-core:5.6.0.Final"
+    compile "org.drools:drools-compiler:5.6.0.Final"
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.1'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.1'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.1'
 }
