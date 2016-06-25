@@ -1,0 +1,40 @@
+plugins {
+    id 'de.aaschmid.cpd' version '0.4'
+}
+
+group 'fi.uba.ar.fallas'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = 'fi.uba.ar.fallas.inferencia.Tp'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven {
+        name 'central'
+        url 'http://repo1.maven.org/maven2'
+    }
+    maven {
+        name 'jboss'
+        url 'http://repository.jboss.org/nexus/content/groups/public-jboss'
+    }
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+ext {
+    droolsVersion = '6.4.0.Final'
+}
+dependencies {
+    compile "org.kie:kie-api:$droolsVersion"
+    compile "org.drools:drools-core:$droolsVersion"
+    compile "org.drools:drools-compiler:$droolsVersion"
+}
