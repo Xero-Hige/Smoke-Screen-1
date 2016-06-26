@@ -25,3 +25,56 @@ Ejecutar el script
 ```shell
 ClasificadorDeLunares.bat
 ```
+
+## Ejecucion de ejemplo
+
+```shell
+Ingrese la cantidad de lunares a evaluar:2
+***************************************
+Evaluando: Lunar 1
+El lunar presenta:
+	1) Forma Asimetrica
+	2) Forma Simetrica
+1
+El lunar presenta:
+	1) Borde regular
+	2) Borde irregular
+2
+El lunar tiene:
+	1) Color unico
+	2) Color variado
+2
+El lunar tiene un diametro menor a 7mm? [S/N]: S
+El lunar tiene relieve? [S/N]: S
+El lunar presento alteraciones en el ultimo mes? [S/N]: S
+El lunar genera comezon? [S/N]: S
+El lunar fue expuesto al sol ultimamente? [S/N]: S
+
+***************Resultado***************
+
+El lunar Lunar 1 se diagnostica como un lunar sin diagnostico
+
+***************************************
+Evaluando: Lunar 2
+El lunar presenta:
+	1) Forma Asimetrica
+	2) Forma Simetrica
+1
+El lunar presenta:
+	1) Borde regular
+	2) Borde irregular
+2
+El lunar tiene:
+	1) Color unico
+	2) Color variado
+2
+El lunar tiene un diametro menor a 7mm? [S/N]: N
+El lunar tiene relieve? [S/N]: S
+El lunar presento alteraciones en el ultimo mes? [S/N]: S
+El lunar genera comezon? [S/N]: S
+El lunar fue expuesto al sol ultimamente? [S/N]: N
+
+***************Resultado***************
+
+El lunar Lunar 2 se diagnostica como un Melanoma maligno
+```
