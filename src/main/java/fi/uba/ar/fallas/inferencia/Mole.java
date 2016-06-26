@@ -101,7 +101,7 @@ public class Mole {
     }
 
     public void showDiagnoses(String diagnose) {
-        System.out.println(String.format(Locale.ENGLISH, "El lunar %s se diagnostica como un posible %s",
+        System.out.println(String.format(Locale.ENGLISH, "El lunar %s se diagnostica como un %s",
                 molename, diagnose));
     }
 }

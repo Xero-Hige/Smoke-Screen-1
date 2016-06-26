@@ -38,7 +38,13 @@ public class Tp {
         System.out.print("Ingrese la cantidad de lunares a evaluar:");
         int number = getNumber();
 
-        for (int i = number; i < 5; i++) {
+        for (int i = 0; i < number; i++) {
+            String name = String.format(Locale.ENGLISH, "Lunar %d", i+1);
+            mole.setMolename(name);
+
+            System.out.println("***************************************");
+            System.out.println("Evaluando: " + name);
+
             setMoleShape(mole);
             setMoleBorder(mole);
             setMoleColor(mole);
@@ -49,13 +55,16 @@ public class Tp {
             setMoleItch(mole);
             setMoleSExposion(mole);
 
-            String name = String.format(Locale.ENGLISH, "Lunar %d", i);
-            mole.setMolename(name);
+            System.out.println();
+            System.out.println("***************Resultado***************");
+            System.out.println();
+
             workingMemory = r.initializeMessageObjects(ruleBase);
             int actualNumberOfRulesFired = workingMemory.fireAllRules();
             if (actualNumberOfRulesFired < 1) {
-                mole.showDiagnoses("Lunar sin diagnostico");
+                mole.showDiagnoses("lunar sin diagnostico");
             }
+            System.out.println();
         }
     }
 
@@ -97,31 +106,31 @@ public class Tp {
 
     private static void setMoleDiameter(Mole mole) {
         boolean option;
-        option = getBoolOption("El lunar tiene un diametro menor a 7mm? [S/N]:");
+        option = getBoolOption("El lunar tiene un diametro menor a 7mm? [S/N]: ");
         mole.setDiameter(option);
     }
 
     private static void setMoleRelieve(Mole mole) {
         boolean option;
-        option = getBoolOption("El lunar tiene relieve? [S/N]:");
+        option = getBoolOption("El lunar tiene relieve? [S/N]: ");
         mole.setRelieve(option);
     }
 
     private static void setMoleChanges(Mole mole) {
         boolean option;
-        option = getBoolOption("El lunar presento alteraciones en el ultimo mes? [S/N]:");
+        option = getBoolOption("El lunar presento alteraciones en el ultimo mes? [S/N]: ");
         mole.setChanges(option);
     }
 
     private static void setMoleSExposion(Mole mole) {
         boolean option;
-        option = getBoolOption("El lunar fue expuesto al sol ultimamente? [S/N]:");
+        option = getBoolOption("El lunar fue expuesto al sol ultimamente? [S/N]: ");
         mole.setSolarExposure(option);
     }
 
     private static void setMoleItch(Mole mole) {
         boolean option;
-        option = getBoolOption("El lunar genera comezon? [S/N]:");
+        option = getBoolOption("El lunar genera comezon? [S/N]: ");
         mole.setItch(option);
     }
 
