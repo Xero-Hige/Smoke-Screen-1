@@ -15,7 +15,7 @@ Se puede conseguir el zip con el programa en la seccion de releases o compilando
 ### Linux
 
 ```shell
-.\ClasificadorDeLunares
+./ClasificadorDeLunares
 ```
 
 ### Windows
